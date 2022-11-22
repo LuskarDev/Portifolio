@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- icon -->
+    <link rel="shortcut icon" href="assets/logov4-black-front.png" type="image/x-icon">
+
+    <!-- link font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+    
+    <!--css-->
+    <link rel="stylesheet" href="estilo.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="query.css">
+
+    <!-- Description-->
+    <meta name="Description" content="Seja Bem-vindo ao Meu Portifolio, já estou ansioso para trabalharmos juntos">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luskar.js - Portifolio</title>
+</head>
+<body>
+
+    <div class="bg-loading">
+        <div class="cup">
+            <div class="light">
+                <div class="snow"></div>
+                <div class="snow"></div>
+                <div class="snow"></div>
+                <div class="snow"></div>
+                <div class="snow"></div>
+                <div class="snow"></div>
+                <div class="snow"></div>
+                <div class="snow"></div>
+                <div class="snow"></div>
+                <div class="snow"></div>
+            </div>   
+            <div class="Glass">
+                <img src="assets/logov4-white-front.png" alt="logo">
+                <div class="floor"></div>
+            </div>
+        </div>
+    </div>
+
+    <header id="header">
+        <figure class="logo">
+            <a href="index.html">
+                <img src="assets/logov4-white-front.png" alt="Logo">
+            </a>
+        </figure>
+        <nav>
+            <ul>
+                <li><a href="#Home">Inicio</a></li>
+                <li><a href="#About">Sobre mim</a></li>
+                <li><a href="#Work">Trabalhos</a></li>
+                <li><a href="#Contact">Contatos</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
+        <div onclick="openMenuMobile()" class="menu">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <div class="switcher-theme">
+            <figure class="isett">
+                <img onclick="OpenSettings()" src="assets/settings.png" alt="settings">
+            </figure>
+            <div class="options-menu">
+                <div class="options">
+                    <div onclick="ShowPut()" class="opt-color">
+                        <p onclick="OpenSettings2()">Color Theme</p>
+                        <i class="fa-solid fa-palette"></i>
+                    </div>
+                </div>
+               
+                <div class="color-Switch">
+                    <div class="color-descrip">
+                        <p >Aqui você pode Mudar as seções do Site</p>
+                        <span id="alertInfo"><i class="fa-solid fa-exclamation"></i></span>
+                    </div>
+                    <div class="color-put">
+                        <p>
+                            <a href="#Home"><label for="inicio">Inicio</label></a>
+                        </p>
+                        <div class="input-color">
+                            <input type="text" name="inicio" id="inicio">
+                            <div id="background-Color"></div>
+                            <div id="checked"><i class="fa-solid fa-check"></i></div>
+
+                        </div>
+                    </div>
+                    <div class="color-put">
+                        <a href="#About">
+                            <label for="sobre">Sobre</label>
+                        </a>
+                        <div class="input-color">
+                            <input type="text" name="sobre" id="sobre">
+                            <div id="background-Color"></div>
+                            <div id="checked"><i class="fa-solid fa-check"></i></div>
+
+                        </div>
+                    </div>
+                    <div class="color-put">
+                        <a href="#Work">
+                            <label for="trabalho">Trabalhos</label>
+                        </a>
+                        <div class="input-color">
+                            <input type="text" name="trabalho" id="trabalho">
+                            <div id="background-Color"></div>
+                            <div id="checked"><i class="fa-solid fa-check"></i></div>
+                        </div>
+                    </div>
+                    <div class="color-put">
+                        <a href="#Contact">
+                            <label for="contatos">Contatos</label>
+                        </a>
+                        <div class="input-color">
+                            <input type="text" name="contatos" id="contatos">
+                            <div id="background-Color"></div>
+                            <div id="checked"><i class="fa-solid fa-check"></i></div>
+                        </div>
+
+                    </div>
+                    <div class="buttons">
+                        <p onclick="HiddenPut()">Voltar</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="btn-top">
+        <a href="#Home">
+            <i class="fa-solid fa-arrow-left" tabindex="0"></i>
+        </a>
+    </div>
+
+    <section id="Home">
+            <div class="bars-social">
+                <ul class="social-list">
+                    <li>
+                        <a href="https://www.linkedin.com/in/luskarjs/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/LuskarDev" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/luskar.js/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="content-wrapper">
+                <div class="text">
+                    <div class="text-home">
+                        <p>Olá, Eu sou o</p>
+                        <p class="name-style">Lucas</p>
+                        <p >Desenvolvedor Web</p>
+                    </div>
+                    <div class="buttons">
+                        <a href="assets/Currículo.pdf" download="Curriculo-Luskar">
+                            Download CV
+                        </a>
+                    </div>
+                </div>
+                <div class="perfil-img">
+                    <figure>
+                        <img src="assets/moldura-removebg-preview2.png" alt="ilustração">
+                        <img src="assets/ilustracao-moldura.jpg" alt="uma ilustração feita a partir de uma foto do criado do portifolio">
+                    </figure>
+                </div>
+            </div>
+            <div class="arrow-about">
+                <figure>
+                    <a href="#About">
+                        <img src="assets/down-arrow.png" alt="uma seta para baixo">
+                    </a>
+                    <div class="circle"></div>
+                </figure>
+            </div>
+            <div class="border-bottom">
+                <img src="assets/wave (4).svg" alt="wave na cor cinza">
+            </div>
+    </section>
+
+    <section id="About">
+        <div class="border-bottom">
+            <img src="assets/wave (4).svg" alt="wave na cor cinza">
+        </div>
+        <div class="rain-raio">
+            <img src="assets/html.png" alt="icone do html">
+            <img src="assets/css-3.png" alt="icone do css">
+            <img src="assets/js.png" alt="icon do javascript">
+            <img src="assets/nodejs.png" alt="icone do nodejs">
+        </div>
+    
+        <main>
+
+            <div class="content-about">
+                <figure>
+                    <img src="assets/perfil.jpeg" alt="Lucas o criador do portifolio em uma foto normal">
+                </figure>
+
+                <div class="text-about">
+                    <h2>
+                        Bem-vindo ao Sobre Mim
+                    </h2>
+
+                    <p>
+                        Olá, Sou um programador Front-end, porém ainda não tenho a experiência de está no mercado, mas espero esta no mercado em breve ajudando a comunidade e a criar novas aplicações e soluções utilizaveis por todos
+                    </p>
+
+                    <div class="buttons">
+                        <button onclick="ShowSobre()">Sobre mim</button>
+                        <button onclick="ShowCerti()">Certificados</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="content-certify">
+                <h2>Meus Certificados</h2>
+
+                <div class="options-certi">
+                    <ul>
+                        <li>
+                            <img onclick="ShowDev()" src="assets/logo-devmedia.png" alt="Logo da devMedia" tabindex="0">
+                        </li>
+                        <li>
+                            <img onclick="ShowRockt()" src="assets/28929274.png" alt="Logo da RocketSeat" tabindex="0">
+                        </li>
+                        <li>
+                            <img onclick="ShowGrass()" src="assets/unnamed.png" alt="Logo do Grasshoper" tabindex="0">
+                        </li>
+                    </ul> 
+                    <button onclick="VoltaCerti()">Voltar</button>
+                </div>
+            </div>
+
+            <div class="certify Rocket">
+                <div onclick="CloseCerti()" class="close">
+                    <i  class="fa-solid fa-arrow-left" tabindex="0"></i>
+                    <p>Voltar</p>
+                </div>
+                <div class="galery-card"> </div>
+             
+            </div>
+
+
+            <div class="certify Grass">
+                <div  onclick="CloseCerti()" class="close">
+                    <i class="fa-solid fa-arrow-left" tabindex="0"></i>
+                    <p>Voltar</p>
+                </div>
+                <div class="galery-card"> </div>
+            </div>
+
+
+            <div class="certify Dev">
+                <div  onclick="CloseCerti()" class="close">
+                    <i class="fa-solid fa-arrow-left" tabindex="0"></i>
+                    <p>Voltar</p>
+                </div>
+
+                <div class="galery-card"></div>
+
+            </div>
+
+            <div class="content-right">
+                <h2>Informações</h2>
+                <div onclick="Close()" class="close">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+                <div class="circle"></div>
+                <img src="assets/iluEuChibi.png" alt="ilustração" id="ilu">
+                <div class="text-content-right">
+                    <p>
+                        <strong>Nome</strong>: Lucas de Oliveira Geraldino
+                    </p>
+                    <p>
+                        <strong>Data de Nascimento</strong>: 19/03/1999
+                    </p>
+                    <p>
+                        <strong>Nacionalidade</strong>: Brasileiro
+                    </p>
+                    <p>
+                        <strong>Endereço</strong>: Brazil, RJ, São Gonçalo
+                    </p>
+                </div>
+
+                <div class="buttons">
+                    <a href="assets/Currículo.pdf" download>Download CV</a>
+                </div>
+            </div>
+
+        </main>
+
+    </section>
+
+    <section id="Work">
+        <div class="title">
+            <h2>Meus Projetos</h2>
+        </div>
+        <div class="galery">
+
+
+        </div>
+      
+    </section>
+
+    <section id="Contact">
+
+        <div class="content-contact">
+            <div class="text-contact">
+                <h2>Contatos</h2>
+
+                <p>Olá... Aqui é onde podemos nos comunicar para trabalharmos juntos</p>
+
+                <div class="infos">
+                    <p>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        contatos.geraldino@gmail.com
+                    </p>
+                    
+                    <p>
+                        <i class="fa-sharp fa-solid fa-location-dot"></i>
+                         Rio De Janeiro, São gonçalo
+                    </p>
+
+                    <p>
+                        <i class="fa-brands fa-whatsapp"></i>
+                        (21) 97144-7401
+                    </p>
+
+                    <p>
+                        <i class="fa-brands fa-instagram"></i>
+                        Luskar.js
+                    </p>
+                </div>
+            </div>
+
+            <div class="form">
+                <form action="https://formsubmit.co/contatos.geraldino@gmail.com" method="post" >
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/sucesso.html">
+                    <div class="form-group">
+                        <input type="text" name="text" id="name" >
+                        <label name="name">Name</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" >
+                        <label name="email">Email</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="number" name="phone" id="phone" >
+                        <label name="phone">Phone</label>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="subject" id="subject" placeholder="Digite o Assunto desejado" cols="30" rows="10"></textarea>
+                    </div>
+                    <button type="submit">Contacta</button>
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="blog">
+        <h2>Em Construção<span>.</span><span>.</span><span>.</span></h2>
+        <div class="arrow-blog">
+            <figure>
+                <a href="#footer">
+                    <img src="assets/down-arrow (cópia).png" alt="seta para baixo">
+                </a>
+                <div class="circle"></div>
+            </figure>
+        </div>
+    </section>
+
+    <footer id="footer">
+        <nav>
+            <figure>
+                <a href="index.html">
+                    <img src="assets/logov4-white-front.png" alt="logo do portifolio">
+                </a>
+            </figure>
+            <ul class="social-footer">
+                <li>
+                    <a href="https://www.linkedin.com/in/luskarjs/" target="_blank">
+                        <i class="fa-brands fa-linkedin"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://github.com/LuskarDev" target="_blank">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/luskar.js/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <nav>
+            <h2>Menu</h2>
+            <ul>
+                <li><a href="#Home">Inicio</a></li>
+                <li><a href="#About">Sobre</a></li>
+                <li><a href="#Work">Trabalhos</a></li>
+                <li><a href="#Contact">Contatos</a></li>
+                <li><a href="#blog">Blog</a></li>
+            </ul>
+        </nav>
+        <nav>
+            <form action="https://formsubmit.co/caixa.de.email21@gmail.com" method="post">
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/sucesso.html">
+                <div class="text-news">
+                    <h2>Novidades</h2>
+                    <span>
+                        <img src="assets/sino.png" alt="um sino na cor amarela balançando de um lado ao outro">
+                    </span>
+                </div>
+                <div class="input-group">
+                    <input type="text" name="news" id="news">
+                    <button type="submit"> Enviar </button>
+                </div>
+            </form>
+        </nav>
+    </footer>
+    <footer class="direitos-footer">
+        <p>Todos direitos reservados a
+             <span>
+                <a href="/index.html">Luskar.js</a>
+            </span>
+        </p>    
+
+    </footer>
+    
+</body>
+<script src="https://kit.fontawesome.com/51bc08e9f3.js" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+<script src="validationForm.js"></script>
+<script src="switch.js"></script>
+<script src="data.js"></script>
+</html>

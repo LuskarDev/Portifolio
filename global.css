@@ -1,0 +1,424 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .35s ease;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap');
+
+@font-face {
+    font-family: Manga;
+    src: url(fonts/Manga.otf)
+    format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth!important;
+}
+
+body{
+    position: relative;
+}
+
+.box-alert{
+    display: none;
+}
+
+.bg{
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    opacity: 0.1;
+    z-index: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+.btn-top{
+    position: fixed;
+    bottom: 40px;
+    right: 20px;
+    padding:10px;
+    background-color:crimson ;
+    border-radius: 4px;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 1s ease;
+    transform: translateY(200px);
+}
+
+.btn-top.ShowBtn{
+    transform: translateY(0px);
+    opacity: 1;
+    visibility: visible;
+    transition: all 1s ease;
+}
+
+.btn-top:hover{
+    box-shadow: 0px 5px 10px 0 rgba(0, 0, 0, 0.877);
+    transform: scale(1.1);
+    transition: transform .35s ease;
+}
+
+.btn-top i {
+    font-size: 1.2rem;
+    color: white;
+    transform: rotate(90deg);
+}
+
+.buttons{
+    margin-top: 30px;
+}
+
+.buttons button,
+.buttons a {
+    position: relative;
+    border: 1px solid #332E30;
+    border-radius: 4px;
+    padding:10px 50px;
+    z-index: 1;
+    font-size: 1rem;
+    font-family: "Manga";
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.buttons a::after{
+    position: absolute;
+    Content: " ";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0%;
+    transition: width .50s ease;
+    z-index: -1;
+}
+
+.buttons a:hover::after{
+    height: 100%;
+    width: 100%;
+    transition: width .50s ease;
+    border-radius: 4px 4px 0px 0px;
+    background: rgb(219,19,19);
+}
+
+
+.bg-loading {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    z-index: 99999999;
+    background-color: #0f0e0e;
+    background-image: linear-gradient(#28313B, #485461 );
+}
+
+.bg-loading .cup {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    z-index: -1;
+    border: 1px solid white;
+    animation: up 1.2s ease-in;
+}
+
+
+.bg-loading .cup .light {
+    position: absolute;
+    left: 43px;
+    top: -5px;
+    background-color: white;
+    height: 14px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.bg-loading .cup .light .snow{
+    position: absolute;
+    top: 20px;
+    background-color: white;
+    border-radius: 50%;
+    width: 3px;
+    height: 3px;
+    z-index: 0;
+}
+
+.bg-loading .cup .light .snow:first-child{
+    animation: down 2s ease infinite;
+    left: 2px;
+}
+
+.bg-loading .cup .light .snow:nth-child(2){
+    animation: down 8s ease infinite;
+    left: 13px;
+}
+
+.bg-loading .cup .light .snow:nth-child(3){
+    animation: down 11s ease infinite;
+    left: 19px;
+}
+
+.bg-loading .cup .light .snow:nth-child(4){
+    animation: down 14s ease infinite;
+    left: 30px;
+}
+
+.bg-loading .cup .light .snow:nth-child(5){
+    animation: down 18s ease infinite;
+    left: 43px;
+}
+
+.bg-loading .cup .light .snow:nth-child(6){
+    animation: down 4s ease infinite;
+    left: 16px;
+}
+
+.bg-loading .cup .light .snow:nth-child(7){
+    animation: down 7s ease infinite;
+    left: 25px;
+}
+
+.bg-loading .cup .light .snow:nth-child(8){
+    animation: down 12s ease infinite;
+    left: 30px;
+}
+
+.bg-loading .cup .light .snow:nth-child(9){
+    animation: down 8s ease infinite;
+    left: 35px;
+}
+
+.bg-loading .cup .light .snow:last-child{
+    animation: down 13s ease infinite;
+    left: 37px;
+}
+
+.bg-loading .cup .Glass {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 100px;
+    width: 80px;
+}
+
+.bg-loading .cup .Glass .floor {
+    position: absolute;
+    bottom: 0;
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    border-radius: 80px;
+    animation: Waves 10s ease-in-out infinite ;
+}
+
+.bg-loading .cup .Glass img{
+    width: 90px;
+}
+
+
+@keyframes Waves {
+    0%{
+        -webkit-clip-path: polygon(67% 25%, 77% 18%, 100% 13%, 100% 100%, 0 100%, 0 79%, 0 47%, 22% 31%, 46% 32%);
+clip-path: polygon(67% 25%, 77% 18%, 100% 13%, 100% 100%, 0 100%, 0 79%, 0 47%, 22% 31%, 46% 32%);
+    }
+    10%{
+        -webkit-clip-path: polygon(66% 37%, 80% 27%, 100% 23%, 100% 100%, 0 100%, 0 79%, 0 39%, 22% 37%, 46% 41%);
+        clip-path: polygon(66% 37%, 80% 27%, 100% 23%, 100% 100%, 0 100%, 0 79%, 0 39%, 22% 37%, 46% 41%);
+    }
+    20%{
+        -webkit-clip-path: polygon(67% 45%, 83% 40%, 100% 30%, 100% 100%, 0 100%, 0 79%, 0 45%, 22% 50%, 46% 41%);
+        clip-path: polygon(67% 45%, 83% 40%, 100% 30%, 100% 100%, 0 100%, 0 79%, 0 45%, 22% 50%, 46% 41%);
+    }
+    35%{
+        -webkit-clip-path: polygon(68% 56%, 85% 47%, 100% 39%, 100% 100%, 0 100%, 0 79%, 0 56%, 22% 50%, 47% 50%);
+clip-path: polygon(68% 56%, 85% 47%, 100% 39%, 100% 100%, 0 100%, 0 79%, 0 56%, 22% 50%, 47% 50%);
+    }
+    40%{
+        -webkit-clip-path: polygon(68% 56%, 85% 54%, 100% 65%, 100% 100%, 0 100%, 0 79%, 0 56%, 17% 45%, 45% 44%);
+clip-path: polygon(68% 56%, 85% 54%, 100% 65%, 100% 100%, 0 100%, 0 79%, 0 56%, 17% 45%, 45% 44%);  
+    }
+    50%{
+        -webkit-clip-path: polygon(64% 64%, 85% 60%, 100% 69%, 100% 100%, 0 100%, 0 79%, 0 56%, 17% 60%, 37% 57%);
+clip-path: polygon(64% 64%, 85% 60%, 100% 69%, 100% 100%, 0 100%, 0 79%, 0 56%, 17% 60%, 37% 57%);
+    }
+    60%{
+        -webkit-clip-path: polygon(59% 68%, 81% 67%, 100% 74%, 100% 100%, 0 100%, 0 79%, 0 56%, 13% 64%, 37% 59%);
+        clip-path: polygon(59% 68%, 81% 67%, 100% 74%, 100% 100%, 0 100%, 0 79%, 0 56%, 13% 64%, 37% 59%);
+    }
+    75%{
+        -webkit-clip-path: polygon(59% 68%, 81% 67%, 100% 74%, 100% 100%, 0 100%, 0 79%, 0 56%, 13% 64%, 37% 59%);
+clip-path: polygon(59% 68%, 81% 67%, 100% 74%, 100% 100%, 0 100%, 0 79%, 0 56%, 13% 64%, 37% 59%);
+    }
+    80%{
+        -webkit-clip-path: polygon(71% 68%, 82% 74%, 100% 74%, 100% 100%, 0 100%, 0 75%, 7% 70%, 19% 71%, 47% 66%);
+        clip-path: polygon(71% 68%, 82% 74%, 100% 74%, 100% 100%, 0 100%, 0 75%, 7% 70%, 19% 71%, 47% 66%);
+    }
+    95%{
+        -webkit-clip-path: polygon(72% 70%, 86% 76%, 100% 82%, 100% 100%, 0 100%, 0 75%, 11% 73%, 24% 78%, 46% 74%);
+        clip-path: polygon(72% 70%, 86% 76%, 100% 82%, 100% 100%, 0 100%, 0 75%, 11% 73%, 24% 78%, 46% 74%);
+    }
+    100%{
+        -webkit-clip-path: polygon(72% 74%, 89% 77%, 100% 82%, 100% 100%, 0 100%, 0 75%, 11% 81%, 24% 84%, 51% 83%);
+        clip-path: polygon(72% 74%, 89% 77%, 100% 82%, 100% 100%, 0 100%, 0 75%, 11% 81%, 24% 84%, 51% 83%);
+    }
+}
+
+@keyframes up {
+    0%{
+        transform: translateY(-1000px);
+    }
+    80% {
+        transform: translateY(20px);
+    }
+    85% {
+        transform: translateY(0px);
+    }
+    90% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+       
+    }
+}
+
+
+@keyframes larguraS {
+    0%{
+        width: 0%;
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+        left: calc(100% - 100%);
+
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+@keyframes down {
+    0%{
+        transform: translateY(-500px);
+    }
+    100% {
+        transform: translateY(200px);
+    }
+}
+
+
+@keyframes RainDown {
+    from {
+        transform: translateY(-390px);
+      }
+      to {
+        transform: translateY(1550px);
+      }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(10px)
+    }
+
+    50%{
+        transform: translateY(-10px)
+
+    }
+    100% {
+        transform: translateY(10px)
+    }
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes badalar {
+    0% {
+        transform: rotate(50deg);
+    }
+    50% {
+        transform: rotate(-50deg);
+    }
+    100%{
+        transform: rotate(70deg);
+    }
+}
+
+@keyframes sentEmail {
+    0% {
+        transform: translateX(-650px);
+    }
+    100% {
+        transform: translateX(880px);
+    }
+}
+
+@keyframes movenuvem {
+    0% {
+        transform: translateX(-100px);
+    }
+    100% {
+        transform: translateX(1380px);
+    }
+}
+
+@keyframes sumir {
+    0% {
+        opacity: 1;
+        left: 250px;
+    }
+    100%{
+        opacity: 0;
+        left: -1250px;
+    }
+}
+
+@keyframes Shake{
+    0% {
+        transform: translateX(2px);
+    }
+    50%{
+        transform: translateX(-2px);
+    }
+    100% {
+        transform: translateX(2px);
+
+    }
+}

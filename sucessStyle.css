@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: black;
+}
+
+header figure img {
+    width: 80px;    
+    margin: 10px 0;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgb(51,46,48);
+    background-image: linear-gradient(#28313B, #485461 );
+    color: black;
+    font-family: "Manga";
+    position: relative;
+    overflow: hidden;
+}
+
+section .all-mail img {
+    position: absolute;
+    width: 40px;
+}
+
+section .all-mail img:nth-child(2){
+    top: 20px;
+    width: 80px;
+    animation: sentEmail 2s infinite ease-in;
+}
+
+section .all-mail img:nth-child(3){
+    top: 100px;
+    width: 110px;
+    animation: sentEmail 4s infinite ease-in;
+}
+
+section .all-mail img:nth-child(4){
+    top: 190px;
+    width: 180px;
+    animation: sentEmail 6s infinite ease-in;
+}
+
+section .all-mail img:nth-child(5){
+    top: 350px;
+    width: 90px;
+    animation: sentEmail 8s infinite ease-in;
+}
+
+section .all-mail img:nth-child(6){
+    top: 450px;
+    width: 130px;
+    animation: sentEmail 10s infinite ease-in;
+}
+
+section .text-sucess-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0px 0px 10px 0 black;
+    z-index: 1;
+}
+
+section .text-sucess-group h1{
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    font-family: "Manga";
+}
+
+section .text-sucess-group figure img {
+    width: 290px;
+}
+
+section .text-sucess-group .button{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px 0;
+    padding: 10px;
+    background-color: transparent;
+}
+
+section .text-sucess-group .button a:hover {
+    background-color: black; 
+    border: 1px solid white;
+    transition: all .35s ease;
+    cursor: pointer;
+}
+
+section .text-sucess-group .button a{
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+    color: black;
+    font-size: 1.2rem;
+}
+
+
+section .text-sucess-group .button a:hover{
+    color: white;
+}
+
+section .text-sucess-group .button p {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+section .text-sucess-group .button p:hover {
+    color: white;
+    background-color: black;
+    transition: all .35s ease;
+    cursor: pointer;
+
+}
