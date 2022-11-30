@@ -112,6 +112,36 @@
     #About main .content-certify h2{
     font-size: 1.5rem;
     }
+
+    #blog .arrow-blog {
+        left: calc(100% - 55%)!important;
+    }
+}
+
+@media  (orientation: landscape){
+    #Home {
+        height: 100%;
+        padding: 5rem 1rem!important;
+    }
+
+    #Home .bars-social .social-list::before{
+        display: none;
+    }
+    
+    #Home .bars-social .social-list::after{
+        display: none;
+    }
+
+    #About main .content-right{
+        height: 300px;
+        width: 470px;
+    }  
+
+    #About {
+        height: 100%;
+        padding: 5rem 1rem!important;
+
+    }
 }
 
 @media (max-width: 767px){
@@ -156,11 +186,15 @@
         backdrop-filter: blur(20px);
         background-image: none;
         background: transparent;
-        border-bottom: 1px solid white;
+        border: 1px solid white;
+        padding: 20px 10px;
+        padding-top: 0px;
     }
 
     header .switcher-theme .options-menu .color-Switch .color-descrip span{
         border: 1px solid white;
+        padding: 5px;
+        width: 40px;
     }
 
     header .switcher-theme .options-menu .color-Switch .color-descrip {
@@ -314,7 +348,7 @@
 }
 
 @media screen and (max-width: 996px){
-    
+
     #Home {
         padding: 20px 20px;
     }
@@ -375,13 +409,14 @@
     #About main .Dev .galery-card{
         background-clip: blur(10px);
         border-radius: 4px;
-        height: 350px;
+        height: 400px;
         overflow-y: scroll!important;
         overflow-x: hidden!important;
     }
 
     #About main .Grass .galery-card,
     #About main .Rocket .galery-card{
+      
         margin: 0 51px ;
     }
 
@@ -412,6 +447,11 @@
     #About main .Dev .galery-card img{
         width: 200px;
     }
+    
+    #About main .Dev .galery-card img:first-child{
+        margin-top: 40px;
+    }
+
 }
 
 @media screen and (max-width: 1010px){
@@ -433,6 +473,7 @@
         padding-top: 2rem;
         right: 0;
         background: #0F0E0E;
+        background-image: linear-gradient(#0F0E0E, #1d1c1c);
         z-index: 20;
         opacity: 0;
         visibility: hidden;
@@ -448,7 +489,7 @@
     }
 
     header ul li{
-        font-size: 1rem;
+        font-size: 1.5rem;
         position: relative;
         width: 100%;
         margin: 10px;
@@ -470,6 +511,7 @@
         transition: all .35s ease;
         opacity: 1;
         z-index: -2;
+        transform: translateY(2px);
         visibility: hidden;
     }
 
