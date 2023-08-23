@@ -78,14 +78,6 @@ window.addEventListener("scroll", ()=> {
     }
 })
 
-window.addEventListener("load", () => {
-    let loading = document.querySelector(".bg-loading")
-
-    setInterval(() => {
-        loading.style.display = "none"
-    }, 2000)
-})
-
 function OpenSettings(){
     OptionMenu.classList.toggle("ShowSettings");
 }
